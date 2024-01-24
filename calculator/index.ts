@@ -1,5 +1,6 @@
 import inquirer, { Answers, QuestionCollection } from "inquirer";
 import chalk from "chalk"
+function calculator(){
 let nums: QuestionCollection = [{
     name: 'num1',
     type: 'number',
@@ -36,3 +37,4 @@ operation.then((operation: Answers) => {
             break;
     }
 })
+}
