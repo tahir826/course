@@ -8,7 +8,8 @@ async function ATM() {
     while (continounTransaction > 0) {
         const logininfo = {
             username: "tahir826",
-            password: 12345
+            password: 12345,
+            Name: 'Muhammad Tahir Hassan',
         };
         let username = await inquirer.prompt([{
                 type: "string",
@@ -20,8 +21,9 @@ async function ATM() {
                 name: "password",
                 message: chalk.red.bgWhite.bold.italic("Enter Password")
             }]);
-        if (username.username == logininfo.username && logininfo.password == logininfo.password) {
-            console.log(chalk.red.bgWhite.underline.italic.bold("You Are Successfully Logged In"));
+        if (username.username == logininfo.username && password.password == logininfo.password) {
+            console.log(chalk.red.bgWhite.underline.italic.bold("Congratulations You Have Logged In"));
+            console.log(chalk.red.bgWhite.underline.italic.bold(`Welcome ${logininfo.Name} To Bank ATM`));
             let login = true;
             while (login) {
                 let account = {
@@ -86,7 +88,7 @@ async function ATM() {
                             message: 'Do You Want To Perform Another Transaction'
                         }]);
                     if (!confirmTransaction.confirm) {
-                        console.log("Thanks For using Our Atm");
+                        console.log(chalk.red.bgWhite.italic.underline("Thanks For using Our Atm"));
                         login = false;
                         continounTransaction = 0;
                     }
