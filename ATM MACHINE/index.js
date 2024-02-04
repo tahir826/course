@@ -4,7 +4,6 @@ async function ATM() {
     console.log(chalk.red.bgWhite.bold.italic("welcome to Bank ATM"));
     let continounTransaction = 6;
     let index = 5;
-    let yOrn = true;
     while (continounTransaction > 0) {
         const logininfo = {
             username: "tahir826",
