@@ -1,7 +1,11 @@
 import inquirer, { Answers } from "inquirer";
 import chalk from "chalk";
 async function ATM() {
-    console.log(chalk.red.bgWhite.bold.italic("welcome to Bank ATM"));
+    console.log(chalk.red.bgWhite.bold.italic("**************************"))
+    console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+    console.log(chalk.red.bgWhite.bold.italic("***Welcome to Bank ATM!***"));
+    console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+    console.log(chalk.red.bgWhite.bold.italic("**************************"))
     let continounTransaction = 6;
     let index = 5;
     while (continounTransaction > 0) {
@@ -54,7 +58,11 @@ async function ATM() {
                         message: 'Do You Want To Perform Another Transaction'
                     }])
                     if (!confirmTransaction.confirm) {
-                        console.log("Thanks For using Our Atm")
+                        console.log(chalk.red.bgWhite.bold.italic("**************************"))
+                        console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+                        console.log(chalk.red.bgWhite.bold.italic("***Thanks for using ATM***"));
+                        console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+                        console.log(chalk.red.bgWhite.bold.italic("**************************"))
                         login = false
                         continounTransaction = 0
                     }
@@ -73,7 +81,11 @@ async function ATM() {
                         message: 'Do You Want To Perform Another Transaction'
                     }])
                     if (!confirmTransaction.confirm) {
-                        console.log("Thanks For using Our Atm");
+                        console.log(chalk.red.bgWhite.bold.italic("**************************"))
+                        console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+                        console.log(chalk.red.bgWhite.bold.italic("***Thanks for using ATM***"));
+                        console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+                        console.log(chalk.red.bgWhite.bold.italic("**************************"))
                         login = false
                         continounTransaction = 0
                     }
@@ -86,7 +98,11 @@ async function ATM() {
                         message: 'Do You Want To Perform Another Transaction'
                     }])
                     if (!confirmTransaction.confirm) {
-                        console.log(chalk.red.bgWhite.italic.underline("Thanks For using Our Atm"));
+                        console.log(chalk.red.bgWhite.bold.italic("**************************"))
+                        console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+                        console.log(chalk.red.bgWhite.bold.italic("***Thanks for using ATM***"));
+                        console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+                        console.log(chalk.red.bgWhite.bold.italic("**************************"))
                         login = false;
                         continounTransaction = 0;
                     }
@@ -94,7 +110,11 @@ async function ATM() {
                 else if (ques.ques == "Exit") {
                     continounTransaction = 0;
                     login = false;
-                    console.log(chalk.red.bgWhite.italic.underline("Thanks For using Our Atm"));
+                    console.log(chalk.red.bgWhite.bold.italic("**************************"))
+                    console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+                    console.log(chalk.red.bgWhite.bold.italic("***Thanks for using ATM***"));
+                    console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+                    console.log(chalk.red.bgWhite.bold.italic("**************************"))
                 }
                 else {
                     let confirmTransaction = await inquirer.prompt([{
@@ -103,7 +123,11 @@ async function ATM() {
                         message: 'Do You Want To Perform Another Transaction'
                     }])
                     if (!confirmTransaction.confirm) {
-                        console.log(chalk.red.bgWhite.italic.underline("Thanks For using Our Atm"));
+                        console.log(chalk.red.bgWhite.bold.italic("**************************"))
+                        console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+                        console.log(chalk.red.bgWhite.bold.italic("***Thanks for using ATM***"));
+                        console.log(chalk.red.bgWhite.bold.italic("******     *****     *****"))
+                        console.log(chalk.red.bgWhite.bold.italic("**************************"))
                         login = false;
                         continounTransaction = 0;
                     }
