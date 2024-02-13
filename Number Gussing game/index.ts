@@ -65,7 +65,6 @@ async function playGame() {
             }
             else {
                 continounTransaction = true
-                // round = 1
             }
         }
     }
