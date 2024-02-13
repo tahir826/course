@@ -15,6 +15,7 @@ async function playGame() {
         let randomNumber = generateRandomNumber();
         let rounds = 3;
         let round = 1;
+        let Status = true;
         while (round <= rounds) {
             const userInput = await inquirer.prompt({
                 type: 'input',
@@ -32,9 +33,10 @@ async function playGame() {
                 if (!continuePlaying.continue) {
                     continounTransaction = false;
                     round = 5;
+                    Status = false;
                 }
                 else {
-                    continounTransaction = true;
+                    Status = true;
                     round = 1;
                 }
             }
@@ -43,7 +45,7 @@ async function playGame() {
                 round++;
             }
         }
-        if (round = 4) {
+        if (Status) {
             console.log("*****************************************************************");
             console.log("******      *******        *********          ********     ******");
             console.log(chalk.red.bgWhite.bold(`Game over! You couldn't guess the number in ${rounds} rounds.`));
@@ -51,7 +53,7 @@ async function playGame() {
             console.log("******      *******        *********          ********     ******");
             console.log("*****************************************************************");
         }
-        if (round = 4) {
+        if (Status) {
             let continuePlaying = await inquirer.prompt([{
                     type: 'confirm',
                     name: 'continue',
