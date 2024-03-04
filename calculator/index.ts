@@ -1,7 +1,7 @@
 import inquirer, { Answers, QuestionCollection } from "inquirer";
 import chalk from "chalk"
 function calculator(){
-let nums: QuestionCollection = [{
+var nums: QuestionCollection = [{
     name: 'num1',
     type: 'number',
     message:chalk.red.bold.italic('enter your first number'),
